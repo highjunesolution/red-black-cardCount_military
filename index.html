@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <style></style>
+  </head>
+
+  <body>
+    <div class="row min-vh-100 g-0">
+      <div id="left" class="col-12 d-flex flex-column">
+        <button
+          class="btn flex-fill bg-danger d-flex flex-column gap-2 justify-content-center align-items-center"
+          id="redBtn"
+        >
+          <h1 class="display-1 text-white fw-bold" id="red">100</h1>
+          <p
+            class="p-3 bg-danger-subtle fw-bold text-danger rounded-2 w-50"
+            id="redPercent"
+          >
+            100%
+          </p>
+        </button>
+        <button
+          class="btn flex-fill bg-black d-flex flex-column gap-2 justify-content-center align-items-center"
+          id="blackBtn"
+        >
+          <h1 class="display-1 text-white fw-bold" id="black">200</h1>
+          <p
+            class="p-3 bg-secondary-subtle fw-bold text-secondary rounded-2 w-50"
+            id="blackPercent"
+          >
+            100%
+          </p>
+        </button>
+      </div>
+      <div id="right" class="d-none col-12 col-md-4 col-xl-2 d-flex flex-column vh-100">
+        <!-- HEADER -->
+        <div
+          class="bg-success-subtle p-3 d-flex flex-column justify-content-center align-items-center"
+        >
+          <h4 class="m-0">จำนวนทั้งหมด</h4>
+          <h4 id="totalCount" class="m-0">20 ใบ</h4>
+        </div>
+
+        <!-- LIST -->
+        <div id="list" class="flex-fill bg-primary-subtle p-3 overflow-y-auto">
+          <!-- <div 
+            class="d-flex align-items-center bg-light shadow rounded p-2 mb-2 gap-2"
+          >
+            <p class="m-0 ">1</p>
+            <p class="m-0 me-auto">🔴</p>
+            <p class="m-0 ">16:00</p>
+            <button class="btn btn-danger btn-sm">ลบ</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Body -->
+    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+    <div
+      class="modal fade"
+      id="modal"
+      tabindex="-1"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      role="dialog"
+      aria-labelledby="modalTitleId"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal"
+        role="document"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="modalTitleId">ระบุจำนวนใบดำใบแดง</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex flex-column gap-2">
+              <div class="d-flex gap-2">
+                <div class="bg-danger w-25"></div>
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="ระบุจำนวนใบแดง"
+                  id="redInput"
+                />
+              </div>
+              <div class="d-flex gap-2">
+                <div class="bg-black w-25"></div>
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="ระบุจำนวนใบดำ"
+                  id="blackInput"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="saveBtn">
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Optional: Place to the bottom of scripts -->
+    <script src="script.js"></script>
+
+  </body>
+</html>
