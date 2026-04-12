@@ -118,7 +118,7 @@ function updatePercent() {
 function showList() {
     list.innerHTML = [...listData]
         .map((item, index) => ({ item, index }))
-        .sort((a, b) => b.index - a.index)
+        .reverse()
         .map(({ item, index }) =>
             `<div class="d-flex align-items-center bg-light shadow rounded p-2 mb-2 gap-2">
                 <p class="m-0">${index + 1}</p>
