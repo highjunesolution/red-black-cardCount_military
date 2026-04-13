@@ -51,6 +51,10 @@ document.addEventListener("DOMContentLoaded", () => {
 document.getElementById("saveBtn").addEventListener("click", () => {
     redCount = parseInt(document.getElementById("redInput").value);
     blackCount = parseInt(document.getElementById("blackInput").value);
+
+    redBtn.disabled = false
+    blackBtn.disabled = false
+
     listData.splice(0, listData.length)
     if (!redCount || !blackCount || redCount < 0 || blackCount < 0) {
         return alert("โปรดระบุ จำนวนใบดำใบแดงให้ถูกต้องครบถ้วน");
